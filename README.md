@@ -50,7 +50,7 @@ Set permissions for the folders for the Domain Users group.
 <p>
 On Client-1 (normal user), navigate to the shared folder (start, run, \\DC-1).
 
-Attempt to access the folders you just created and see what happens. You should be hit with a Network Error notification telling you that you do not have access the folder.
+Attempt to access the folders you just created and see what happens. You should be hit with a Network Error notification telling you that you do not have access to the folder.
 </p>
 <br />
 
@@ -60,6 +60,6 @@ Attempt to access the folders you just created and see what happens. You should 
 <p>
 On Client-1 (normal user), navigate to the shared folder (start, run, \\DC-1).
 
-Attempt to access the folders you just created and see what happens. You should be hit with a Network Error notification telling you that you do not have access the folder.
+Attempt to access the folders you just created and see what happens. You should be hit with a Network Error notification telling you that you do not have access to the folder.
 </p>
 <br />
