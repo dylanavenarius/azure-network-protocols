@@ -50,7 +50,7 @@ Set permissions for the folders for the Domain Users group.
 <p>
 On Client-1 (normal user), navigate to the shared folder (start, run, \\DC-1).
 
-Attempt to access the folders you just created and see what happens. You should be hit with a Network Error notification telling you that you do not have access to the folder.
+Attempt to access the folders you just created and see what happens. You should be hit with a Network Error notification telling you that you do not have access to the folder. Because we set permissions for viewing for the Domain Users group only, it should make sense that when logged in as a normal user, we are not authorized to perform this action. To change this, go back to where we created the folders (c:\drive on DC-1), and toggle the permission settings.
 </p>
 <br />
 
