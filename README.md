@@ -70,5 +70,7 @@ Attempt to access the folders you just created and see what happens. You should 
 Now we are going to create a new security group, add a user, set permissions, and test access. Go back to DC-1, in Active Directory, create a new Security Group called "Accountants". On the accounting folder we created in the first step, set the permissions for the Accounting Security Group, and the security permissions to "read/write". Return to Client-1 (logged in a the same normal user), and try to access the accountants folder. It should fail.
 
 To fix this, we need to log out of Client-1 as our normal user, return to our DC-1 connection, and navigate to Active Directory to add our normal user as a member of the Accountants Security Group.
+
+Now, return to your Client-1 connection, log in as the normal user you added to the Accountants Security Group, and try accessing the accountants folder again. It should work.
 </p>
 <br />
