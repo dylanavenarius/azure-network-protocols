@@ -20,11 +20,36 @@ In this tutorial, we observe various network traffic to and from Azure Virtual M
 
 <h2>High-Level Steps</h2>
 
+- Inspect/filter traffic between VMs using Wireshark
 - Create sample file shares with various permissions
 - Attempt to access file shares as a normal user
 - Create a new security group, assign permissions, and test access
 
 <h2>Actions and Observations</h2>
+
+<p>
+<a href="https://ibb.co/gjGmWqG"><img src="https://i.ibb.co/ZL3Gg43/Screen-Shot-2023-10-24-at-11-49-43-AM.png" alt="Screen-Shot-2023-10-24-at-11-49-43-AM" border="0" /></a>
+</p>
+
+<p>
+<a href="https://ibb.co/KFkQCHk"><img src="https://i.ibb.co/hDjnpvj/Screen-Shot-2023-10-24-at-12-37-11-PM.png" alt="Screen-Shot-2023-10-24-at-12-37-11-PM" border="0" /></a>
+</p>
+
+<p>
+<a href="https://ibb.co/c2TH3Qv"><img src="https://i.ibb.co/L9pWR1P/Screen-Shot-2023-10-24-at-12-42-54-PM.png" alt="Screen-Shot-2023-10-24-at-12-42-54-PM" border="0" /></a>
+</p>
+
+<p>
+Make sure both VMs are in the same Vnet when created.
+
+First log in to your Client-1 VM and install Wireshark. Once installed, select the ethernet adapter and click the blue fin icon in the top left corner to start capturing packets. This is going to let us see the actual live traffic that is happening on our VM. To filter this traffic using the ICMP protocol, we need to type to apply it as a display filter. We will now only be able to observe ICMP traffic. This same step can be done to filter following traffic: SSH, DHCP, DNS, RDP.
+
+Since both of our VMs are in the same Vnet, we can get the Private IP Address of our DC-1 VM and ping it using Powershell from our Client-1 VM and observe the ping requests and replies.
+
+Next, we are going to initiate a perpetual ping (ping -t) from our Client-1 VM to our DC-1 VM and then change the firewall to not allow ICMP traffic to come through. Because ping uses ICMP protocol, we are going to actually block ICMP traffic on the firewall, and once that happens we should stop seeing receiving echo replies.
+
+In Azure, go to your VM and under settings, and select inbound security rules. Here, we are going to add a new inbound security rule to "Deny" ICMP Protocol. Click "Add" and wait for the rule to be created on the VMs Network Security Group. Go back into your Client-1 VM and you will notice that the ping immediately started timing out. It's getting blocked by DC-1s firewall. You can see in Wireshark that we are getting a lot of requests, but no replies now. This is because it is being blocked by the Network Security Group, so there is no chance to receive it to send a reply anymore.
+</p>
 
 <p>
 <a href="https://ibb.co/fSSGXq6"><img src="https://i.ibb.co/KGGz5b4/Screen-Shot-2023-10-24-at-10-48-24-AM.png" alt="Screen-Shot-2023-10-24-at-10-48-24-AM" border="0" /></a>
