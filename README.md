@@ -52,10 +52,11 @@ It is important to take care of the patient, to be followed by the patient, but 
 </p>
 <br />
 
-<p>
-<img src="https://i.imgur.com/DJmEXEB.png" height="80%" width="80%" alt="Disk Sanitization Steps"/>
+<p><a href="https://ibb.co/D8YY9Vx"><img src="https://i.ibb.co/cCww6gG/Screen-Shot-2023-10-24-at-11-01-19-AM.png" alt="Screen-Shot-2023-10-24-at-11-01-19-AM" border="0" /></a>
 </p>
 <p>
-It is important to take care of the patient, to be followed by the patient, but it will happen at such a time that there is a lot of work and pain. For to come to the smallest detail, no one should practice any kind of work unless he derives some benefit from it. Do not be angry with the pain in the reprimand in the pleasure he wants to be a hair from the pain in the hope that there is no breeding.
+On Client-1 (normal user), navigate to the shared folder (start, run, \\DC-1).
+
+Attempt to access the folders you just created and see what happens. You should be hit with a Network Error notification telling you that you do not have access the folder.
 </p>
 <br />
