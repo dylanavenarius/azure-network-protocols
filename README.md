@@ -30,7 +30,15 @@ In this tutorial, we observe various network traffic to and from Azure Virtual M
 <img src="https://i.imgur.com/DJmEXEB.png" height="80%" width="80%" alt="Disk Sanitization Steps"/>
 </p>
 <p>
-Start by connecting/logging into the Domain Controller VM as your Domain Admin account, and into your Client-1 VM as a normal user.
+Start by connecting/logging in to the DC-1 VM as your Domain Admin account, and in to your Client-1 VM as a normal user.
+On DC-1, on the C:\drive, create four folders:
+
+- read-access
+- write-access
+- no-access
+- accounting
+
+
 </p>
 <br />
 
