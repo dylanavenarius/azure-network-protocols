@@ -42,7 +42,7 @@ In this tutorial, we observe various network traffic to and from Azure Virtual M
 <p>
 Make sure both VMs are in the same Vnet when created.
 
-First log in to your Client-1 VM and install Wireshark. Once installed, select the ethernet adapter and click the blue fin icon in the top left corner to start capturing packets. This is going to let us see the actual live traffic that is happening on our VM. To filter this traffic using the ICMP protocol, we need to type to apply it as a display filter. We will now only be able to observe ICMP traffic. This same step can be done to filter following traffic: SSH, DHCP, DNS, RDP.
+First log in to your Client-1 VM and install Wireshark. Once installed, select the ethernet adapter and click the blue fin icon in the top left corner to start capturing packets. This is going to let us see the actual live traffic that is happening on our VM. To filter this traffic using the ICMP protocol, we need to apply it as a display filter. We will now only be able to observe ICMP traffic. This same step can be done to filter following traffic: SSH, DHCP, DNS, RDP.
 
 Since both of our VMs are in the same Vnet, we can get the Private IP Address of our DC-1 VM and ping it using Powershell from our Client-1 VM and observe the ping requests and replies.
 
